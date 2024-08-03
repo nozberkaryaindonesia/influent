@@ -10,9 +10,15 @@ name: Deno
 
 on:
   push:
-    branches: ["master"]
+#<<<<<<< influent-mg
+#    branches: ["master"]
+#  pull_request:
+#    branches: ["master"]
+#=======
+    branches: ["*"]
   pull_request:
-    branches: ["master"]
+    branches: ["*"]
+#>>>>>>> master
 
 permissions:
   contents: read
