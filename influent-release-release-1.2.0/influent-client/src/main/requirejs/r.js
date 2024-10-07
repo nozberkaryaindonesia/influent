@@ -212,8 +212,8 @@ var requirejs, require, define, xpcUtil;
 
         readFile = xpcUtil.readFile;
 
-        exec = function (string) {
-            return eval(string);
+        exec = function (config) {
+            return require.config(config);
         };
 
         exists = function (fileName) {
@@ -25064,7 +25064,7 @@ define('build', function (require) {
             dir = dir.split('/');
             dir.pop();
             dir = dir.join('/');
-            exec("require({baseUrl: '" + dir + "'});");
+            exec({ baseUrl: dir });
         }
     }
 
