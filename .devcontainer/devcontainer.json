@@ -1,0 +1,21 @@
+// .devcontainer/devcontainer.json
+
+{
+    "name": "Influent Development Container",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "vscjava.vscode-java-pack",
+        "redhat.java",
+        "vscjava.vscode-maven",
+        "mhutchie.git-graph",
+        "eamodio.gitlens"
+    ],
+    "postCreateCommand": "cabal update && mvn --version",
+    "forwardPorts": [],
+    "remoteUser": "root"
+}
